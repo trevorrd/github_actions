@@ -1,0 +1,21 @@
+{
+  "name": "github_action_demo",
+  "version": "1.0.0",
+  "description": "This is a simple node app that will test github actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config ./jest.config.js",
+    "test:watch": "npm run test -- --watch"
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "node"
+  ],
+  "author": "Trevor D",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^26.1.0"
+  }
+}
