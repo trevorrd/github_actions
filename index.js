@@ -1,55 +1,13 @@
-class Main {
-  constructor(
-    days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ]
-  ) {
-    this.days = days;
-  }
+const Calendar = require("./calendar.js");
 
-  listDays() {
-    console.log("Days are " + this.days);
-    return this.days;
-  }
+const cal = new Calendar();
+console.log(`Days are ${cal.getDays()}`);
+cal.addDay("Funday", 1);
 
-  addDay(newDay) {
-    this.days.push(newDay);
-  }
+console.log(`Days are ${cal.getDays()}`);
+cal.deleteDay("Funday");
 
-  addDay(newDay, atIndex) {
-    this.days.splice(atIndex, 0, newDay);
-  }
+console.log(`Days are ${cal.getDays()}`);
 
-  deleteDay(removedDay) {
-    this.days = this.days.filter((v) => v !== removedDay);
-  }
-
-  findDay(day) {
-    let foundDay;
-    foundDay = this.days.filter((v) => v === day);
-
-    return foundDay.length > 0 ? foundDay : "[No day found]";
-  }
-}
-
-module.exports = {
-  Main,
-};
-
-let main = new Main();
-main.listDays();
-main.addDay("Funday", 1);
-
-main.listDays();
-main.deleteDay("Funday");
-
-main.listDays();
-
-console.log(`Found: ${main.findDay("Sunday")}`);
-console.log(`Found: ${main.findDay("Funday")}`);
+console.log(`Found: ${cal.findDay(cal.getDays())("Sunday")}`);
+console.log(`Found: ${cal.findDay(cal.getDays())("Funday")}`);
