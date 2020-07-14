@@ -7,7 +7,7 @@ on:
 jobs:
   Run-Unit-Tests:
     runs-on: ubuntu-latest
-      steps:
+    steps:
       - name: Checkout the code for repository use
         uses: actions/checkout@v2.1.1
       - name: Setup node on ubuntu
