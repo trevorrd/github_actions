@@ -13,7 +13,7 @@ const Days = Object.freeze({
 
 describe("Project Unit Tests", () => {
   it("Make sure 5 is really 5", () => {
-    expect(5).toBe(4);
+    expect(5).toBe(5);
   });
 
   it("Make sure true is really true", () => {
