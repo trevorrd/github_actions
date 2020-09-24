@@ -10,11 +10,21 @@ jobs:
     steps:
       - name: Checkout the code for repository use
         uses: actions/checkout@v2.1.1
+
+      - name: Setup environment variable 
+        run: | 
+          MYVAR="Hi there"
+
       - name: Setup node on ubuntu
         uses: actions/setup-node@v1.4.2
         with:
           node-version: 12
+
       - name: Node clean install
         run: npm ci
+
       - name: Unit tests
         run: npm test
+
+      - name: Accessing environment variable
+        run: echo "Now showing you $MYVAR"
