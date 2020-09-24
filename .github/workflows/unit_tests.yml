@@ -13,7 +13,7 @@ jobs:
 
       - name: Setup environment variable 
         run: | 
-          MYVAR="Hi there"
+          export MYVAR="Hi there"
 
       - name: Setup node on ubuntu
         uses: actions/setup-node@v1.4.2
